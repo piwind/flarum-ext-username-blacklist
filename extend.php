@@ -17,11 +17,13 @@ return [
         ->configure(function (UserValidator $flarumValidator, Validator $validator) {
             $rules = $validator->getRules();
 
-            if (!array_key_exists('username', $rules)) {
-                return;
+            if (array_key_exists('username', $rules)) {
+                $rules['username'][] = resolve(WhitelistRule::class);
             }
 
-            $rules['username'][] = resolve(WhitelistRule::class);
+            if (array_key_exists('nickname', $rules)) {
+                $rules['nickname'][] = resolve(WhitelistRule::class);
+            }
 
             $validator->setRules($rules);
         }),
