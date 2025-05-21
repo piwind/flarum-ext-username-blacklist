@@ -1,0 +1,18 @@
+piwind-username-blacklist:
+    admin:
+        settings:
+            regex: 正则表达式
+            regexHelp: >
+                开启即从用户名精确匹配切换到正则表达式检查。\n
+                一行一个，如用正则表达式则定界符"/"不可缺少。
+            message: 自定义错误消息
+            blacklist: 黑名单
+            blacklistHelp: >
+                每行一个。\n
+                如果没有提供黑名单，则所有不在白名单中的内容都将被拒绝。
+            whitelist: 白名单
+            whitelistHelp: >
+                每行一个。\n
+                注意白名单优先级高于黑名单。
+    api:
+        fallbackMessage: 此用户名/昵称不能使用。

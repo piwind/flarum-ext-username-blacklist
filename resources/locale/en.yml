@@ -3,16 +3,16 @@ piwind-username-blacklist:
         settings:
             regex: Regular Expression
             regexHelp: >
-                Switch from domain list to regular expression check.
+                Switch from exact username matching to regular expression check.\n
                 Each line of the list must be a valid regular expression with delimiters.
             message: Custom Error Message
             blacklist: Blacklist
             blacklistHelp: >
-                One expression per line.
+                One expression per line.\n
                 If no blacklist is provided, everything not whitelisted will be rejected.
             whitelist: Whitelist
             whitelistHelp: >
-                One expression per line.
+                One expression per line.\n
                 Will have priority over the blacklist.
     api:
-        fallbackMessage: The username/nickname is not whitelisted.
+        fallbackMessage: The username/nickname is not allowed.
