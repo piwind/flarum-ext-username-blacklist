@@ -1,8 +1,8 @@
 # Username Blacklist
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/clarkwinkelmann/flarum-ext-username-blacklist.svg)](https://packagist.org/packages/clarkwinkelmann/flarum-ext-username-blacklist) [![Total Downloads](https://img.shields.io/packagist/dt/clarkwinkelmann/flarum-ext-username-blacklist.svg)](https://packagist.org/packages/clarkwinkelmann/flarum-ext-username-blacklist) [![Donate](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.me/clarkwinkelmann)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/piwind/flarum-ext-username-blacklist.svg)](https://packagist.org/packages/piwind/flarum-ext-username-blacklist) [![Total Downloads](https://img.shields.io/packagist/dt/piwind/flarum-ext-username-blacklist.svg)](https://packagist.org/packages/piwind/flarum-ext-username-blacklist)
 
-This extension allows blacklisting or whitelisting usernames.
+This extension allows blacklisting or whitelisting username/nickname.
 
 In default mode, a case-insensitive check is done with the provided username against the list.
 
@@ -14,23 +14,40 @@ If a blacklist is defined, every whitelisted value as well as values not matched
 
 The validation error message can be customized in the settings.
 
-## Installation
+中文解释：
 
-    composer require clarkwinkelmann/flarum-ext-username-blacklist
+- 未定义黑名单的时候，仅白名单生效，只允许白名单中的值
 
-## Support
+- 定义黑名单后，黑名单中的拒绝，白名单中的无论黑名单中是否有都允许，两者都不在的也允许
 
-This extension is under **minimal maintenance**.
+- 建议正则表达式：开（不开的话，只有完全匹配的才排除掉）
 
-It was developed for a client and released as open-source for the benefit of the community.
-I might publish simple bugfixes or compatibility updates for free.
+- 示例黑名单：（以admin开头的，无论大小写的）
 
-You can [contact me](https://clarkwinkelmann.com/flarum) to sponsor additional features or updates.
+  ```
+  /^admin/i
+  ```
 
-Support is offered on a "best effort" basis through the Flarum community thread.
+## About This Fork
+
+This repository is a fork of [clarkwinkelmann/flarum-ext-username-blacklist](clarkwinkelmann/flarum-ext-username-blacklist), add support to blacklist nicknames if available.
+
+## Installation & Updating
+
+Install with composer:
+
+```sh
+composer require piwind/flarum-ext-username-blacklist
+```
+
+Updating:
+
+```sh
+composer update piwind/flarum-ext-username-blacklist
+```
 
 ## Links
 
-- [GitHub](https://github.com/clarkwinkelmann/flarum-ext-username-blacklist)
-- [Packagist](https://packagist.org/packages/clarkwinkelmann/flarum-ext-username-blacklist)
-- [Discuss](https://discuss.flarum.org/d/28378)
+- [GitHub](https://github.com/piwind/flarum-ext-username-blacklist)
+- [Packagist](https://packagist.org/packages/piwind/flarum-ext-username-blacklist)
+

@@ -1,5 +1,5 @@
 {
-    "name": "@clarkwinkelmann/username-blacklist",
+    "name": "@piwind/username-blacklist",
     "private": true,
     "dependencies": {
         "flarum-tsconfig": "^1.0",

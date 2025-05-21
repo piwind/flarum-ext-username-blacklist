@@ -1,6 +1,6 @@
 <?php
 
-namespace ClarkWinkelmann\UsernameBlacklist;
+namespace Piwind\UsernameBlacklist;
 
 use Flarum\Locale\Translator;
 use Flarum\Settings\SettingsRepositoryInterface;
@@ -19,9 +19,9 @@ class WhitelistRule implements Rule
 
     public function passes($attribute, $value)
     {
-        $regex = (bool)$this->settings->get('clarkwinkelmann-username-blacklist.regex');
+        $regex = (bool)$this->settings->get('piwind-username-blacklist.regex');
 
-        foreach (explode("\n", $this->settings->get('clarkwinkelmann-username-blacklist.whitelist')) as $line) {
+        foreach (explode("\n", $this->settings->get('piwind-username-blacklist.whitelist')) as $line) {
             $expression = trim($line);
 
             // Do not evaluate empty lines
@@ -34,7 +34,7 @@ class WhitelistRule implements Rule
             }
         }
 
-        $blacklist = trim($this->settings->get('clarkwinkelmann-username-blacklist.blacklist'));
+        $blacklist = trim($this->settings->get('piwind-username-blacklist.blacklist'));
 
         // If no blacklist is provided, fail all other values
         if (!$blacklist) {
@@ -63,6 +63,6 @@ class WhitelistRule implements Rule
 
     public function message()
     {
-        return $this->settings->get('clarkwinkelmann-username-blacklist.message') ?: $this->translator->trans('clarkwinkelmann-username-blacklist.api.fallbackMessage');
+        return $this->settings->get('piwind-username-blacklist.message') ?: $this->translator->trans('piwind-username-blacklist.api.fallbackMessage');
     }
 }

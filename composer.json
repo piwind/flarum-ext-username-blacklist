@@ -1,5 +1,5 @@
 {
-    "name": "clarkwinkelmann/flarum-ext-username-blacklist",
+    "name": "piwind/flarum-ext-username-blacklist",
     "description": "Blacklist or whitelist specific username/nickname",
     "keywords": [
         "flarum",
@@ -15,6 +15,12 @@
     },
     "authors": [
         {
+            "name": "piwind",
+            "homepage": "https://github.com/piwind",
+            "email": "piwind95@outlook.com",
+            "role": "Developer"
+        },
+        {
             "name": "Clark Winkelmann",
             "homepage": "https://clarkwinkelmann.com/",
             "email": "clark.winkelmann@gmail.com",
@@ -22,12 +28,11 @@
         }
     ],
     "support": {
-        "source": "https://github.com/clarkwinkelmann/flarum-ext-username-blacklist",
-        "forum": "https://discuss.flarum.org/d/28378"
+        "source": "https://github.com/piwind/flarum-ext-username-blacklist"
     },
     "autoload": {
         "psr-4": {
-            "ClarkWinkelmann\\UsernameBlacklist\\": "src/"
+            "Piwind\\UsernameBlacklist\\": "src/"
         }
     },
     "extra": {
@@ -39,9 +44,6 @@
                 "backgroundColor": "#684ba6",
                 "color": "#fff"
             }
-        },
-        "flagrow": {
-            "discuss": "https://discuss.flarum.org/d/28378"
         }
     }
 }

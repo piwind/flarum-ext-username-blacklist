@@ -1,6 +1,6 @@
 <?php
 
-namespace ClarkWinkelmann\UsernameBlacklist;
+namespace Piwind\UsernameBlacklist;
 
 use Flarum\Extend;
 use Flarum\User\UserValidator;
